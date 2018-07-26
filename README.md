@@ -5,3 +5,9 @@
 
 
 
+简书地址：https://www.jianshu.com/p/7fd5e964e510
+ 
+
+ 
+
+下载地址：https://github.com/hl152152/TypefaceSize.git
