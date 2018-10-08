@@ -1,14 +1,18 @@
 package com.example.administrator.typefacesize;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.administrator.typefacesize.util.SetTextSizeView;
 
@@ -50,6 +54,8 @@ import butterknife.OnClick;
  */
 public class FontSizeAcivity extends Activity {
 
+
+    private static final String fileName = "sharedziti";// 定义保存的文件的名称
 
     @BindView(R.id.set_size)
     SetTextSizeView setSize;
@@ -126,7 +132,20 @@ public class FontSizeAcivity extends Activity {
                 finish();
                 break;
             case R.id.fontsize_sure:
-                startActivity(new Intent(this, MainActivity.class));
+                Log.d("TAG", "onViewClicked: " + ztSize);
+
+                if (ztSize == 0.0f) {
+                    Toast.makeText(this, "请设置字体大小", Toast.LENGTH_SHORT).show();
+                } else {
+                    float zt = ztSize;
+                    SharedPreferences spCount = getApplication().getSharedPreferences(fileName, Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = spCount.edit();
+                    editor.putFloat("zt", zt);
+                    editor.commit();
+                    startActivity(new Intent(this, MainActivity.class));
+
+
+                }
 
 
                 break;

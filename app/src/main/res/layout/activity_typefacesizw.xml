@@ -4,6 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="列表预览图"
+        android:textColor="@color/color_666666"
+        android:textSize="13sp" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,26 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:text="列表预览图"
-            android:textColor="@color/color_666666"
-            android:textSize="13sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/material_white10" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:text="标准系列文字"
-            android:textColor="@color/material_grey_900"
             android:textSize="15sp" />
 
         <TextView
@@ -118,7 +112,8 @@
             android:text="标准系列文字"
             android:textColor="@color/text_color_select_gray"
             android:textSize="13sp" />
-          <View
+
+        <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginLeft="20dp"
@@ -151,9 +146,11 @@
         android:id="@+id/setting_Size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="设置字体"
+        android:layout_gravity="center"
         android:layout_marginTop="30dp"
+        android:text="设置字体"
         android:textColor="@color/colorAccent"
         android:textSize="15dp" />
+
 
 </LinearLayout>
